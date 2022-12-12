@@ -1,5 +1,5 @@
 Timing Analyzer report for MIPSExpo
-Mon Dec 12 13:00:33 2022
+Mon Dec 12 19:14:06 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -102,16 +102,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.70        ;
+; Average used               ; 2.23        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  35.5%      ;
-;     Processor 3            ;  35.1%      ;
-;     Processor 4            ;  34.8%      ;
-;     Processor 5            ;  32.3%      ;
-;     Processor 6            ;  32.3%      ;
+;     Processor 2            ;  26.3%      ;
+;     Processor 3            ;  26.0%      ;
+;     Processor 4            ;  25.6%      ;
+;     Processor 5            ;  22.5%      ;
+;     Processor 6            ;  22.5%      ;
 +----------------------------+-------------+
 
 
@@ -126,14 +126,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                ;
-+-----------+-----------------+----------------------------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                                   ; Note ;
-+-----------+-----------------+----------------------------------------------+------+
-; 90.48 MHz ; 90.48 MHz       ; CLOCK_50                                     ;      ;
-; 99.42 MHz ; 99.42 MHz       ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ;      ;
-+-----------+-----------------+----------------------------------------------+------+
++------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                 ;
++------------+-----------------+----------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                   ; Note ;
++------------+-----------------+----------------------------------------------+------+
+; 92.15 MHz  ; 92.15 MHz       ; CLOCK_50                                     ;      ;
+; 124.12 MHz ; 124.12 MHz      ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ;      ;
++------------+-----------------+----------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -143,14 +143,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                    ;
-+----------------------------------------------+---------+---------------+
-; Clock                                        ; Slack   ; End Point TNS ;
-+----------------------------------------------+---------+---------------+
-; CLOCK_50                                     ; -10.052 ; -14190.558    ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -9.058  ; -427.179      ;
-+----------------------------------------------+---------+---------------+
++-----------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                   ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; CLOCK_50                                     ; -9.852 ; -13986.791    ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -7.057 ; -391.522      ;
++----------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------+
@@ -159,7 +159,7 @@ HTML report is unavailable in plain text report export.
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
 ; CLOCK_50                                     ; 0.344 ; 0.000         ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.391 ; 0.000         ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.473 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -168,7 +168,7 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -4.296 ; -4.296        ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -4.560 ; -4.560        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -177,7 +177,7 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------+-------+---------------+
 ; Clock                                                    ; Slack ; End Point TNS ;
 +----------------------------------------------------------+-------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 1.681 ; 0.000         ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 1.823 ; 0.000         ;
 +----------------------------------------------------------+-------+---------------+
 
 
@@ -186,9 +186,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                 ; -2.636 ; -2533.472     ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.636 ; -97.288       ;
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.538 ; -0.884        ;
+; CLOCK_50                                                 ; -2.636 ; -2533.532     ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.636 ; -95.505       ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.538 ; -0.858        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -198,14 +198,14 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                 ;
-+-----------+-----------------+----------------------------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                                   ; Note ;
-+-----------+-----------------+----------------------------------------------+------+
-; 91.98 MHz ; 91.98 MHz       ; CLOCK_50                                     ;      ;
-; 97.18 MHz ; 97.18 MHz       ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ;      ;
-+-----------+-----------------+----------------------------------------------+------+
++------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                  ;
++------------+-----------------+----------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                   ; Note ;
++------------+-----------------+----------------------------------------------+------+
+; 93.62 MHz  ; 93.62 MHz       ; CLOCK_50                                     ;      ;
+; 121.73 MHz ; 121.73 MHz      ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ;      ;
++------------+-----------------+----------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -214,8 +214,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; CLOCK_50                                     ; -9.872 ; -13722.110    ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -9.290 ; -429.160      ;
+; CLOCK_50                                     ; -9.681 ; -13303.923    ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -7.215 ; -386.871      ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -224,8 +224,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; CLOCK_50                                     ; 0.320 ; 0.000         ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.394 ; 0.000         ;
+; CLOCK_50                                     ; 0.112 ; 0.000         ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.434 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -234,7 +234,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -4.456 ; -4.456        ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -4.709 ; -4.709        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -243,7 +243,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------+-------+---------------+
 ; Clock                                                    ; Slack ; End Point TNS ;
 +----------------------------------------------------------+-------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 1.934 ; 0.000         ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 2.071 ; 0.000         ;
 +----------------------------------------------------------+-------+---------------+
 
 
@@ -252,9 +252,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                 ; -2.636 ; -2568.113     ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.636 ; -96.246       ;
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.538 ; -0.884        ;
+; CLOCK_50                                                 ; -2.636 ; -2568.932     ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.636 ; -94.987       ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.538 ; -0.855        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -269,8 +269,8 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; CLOCK_50                                     ; -4.636 ; -6486.514     ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -4.519 ; -194.060      ;
+; CLOCK_50                                     ; -4.490 ; -6485.214     ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -3.333 ; -178.383      ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -279,8 +279,8 @@ No synchronizer chains to report.
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.114 ; 0.000         ;
-; CLOCK_50                                     ; 0.174 ; 0.000         ;
+; CLOCK_50                                     ; 0.033 ; 0.000         ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.177 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -289,7 +289,7 @@ No synchronizer chains to report.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -1.966 ; -1.966        ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -1.991 ; -1.991        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -298,7 +298,7 @@ No synchronizer chains to report.
 +----------------------------------------------------------+-------+---------------+
 ; Clock                                                    ; Slack ; End Point TNS ;
 +----------------------------------------------------------+-------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 0.717 ; 0.000         ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 0.761 ; 0.000         ;
 +----------------------------------------------------------+-------+---------------+
 
 
@@ -307,9 +307,9 @@ No synchronizer chains to report.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                 ; -2.174 ; -631.890      ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.174 ; -34.477       ;
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.066 ; -0.066        ;
+; CLOCK_50                                                 ; -2.174 ; -632.177      ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.174 ; -34.162       ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.035 ; -0.035        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -324,8 +324,8 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -4.135 ; -173.206      ;
-; CLOCK_50                                     ; -4.130 ; -5568.235     ;
+; CLOCK_50                                     ; -4.004 ; -5539.316     ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; -3.084 ; -158.349      ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -334,8 +334,8 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; CLOCK_50                                     ; -0.083 ; -0.083        ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.097  ; 0.000         ;
+; CLOCK_50                                     ; -0.237 ; -0.237        ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 0.148  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -344,7 +344,7 @@ No synchronizer chains to report.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -1.871 ; -1.871        ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -1.898 ; -1.898        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -353,7 +353,7 @@ No synchronizer chains to report.
 +----------------------------------------------------------+-------+---------------+
 ; Clock                                                    ; Slack ; End Point TNS ;
 +----------------------------------------------------------+-------+---------------+
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 0.785 ; 0.000         ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; 0.825 ; 0.000         ;
 +----------------------------------------------------------+-------+---------------+
 
 
@@ -362,9 +362,9 @@ No synchronizer chains to report.
 +----------------------------------------------------------+--------+---------------+
 ; Clock                                                    ; Slack  ; End Point TNS ;
 +----------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                 ; -2.174 ; -632.577      ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.174 ; -34.254       ;
-; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.041 ; -0.041        ;
+; CLOCK_50                                                 ; -2.174 ; -632.717      ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -2.174 ; -34.034       ;
+; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; -0.010 ; -0.010        ;
 +----------------------------------------------------------+--------+---------------+
 
 
@@ -379,14 +379,14 @@ No synchronizer chains to report.
 +-----------------------------------------------------------+------------+--------+----------+---------+---------------------+
 ; Clock                                                     ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                                          ; -10.052    ; -0.083 ; -4.456   ; 0.717   ; -2.636              ;
-;  CLOCK_50                                                 ; -10.052    ; -0.083 ; N/A      ; N/A     ; -2.636              ;
-;  MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; N/A        ; N/A    ; -4.456   ; 0.717   ; -0.538              ;
-;  MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -9.290     ; 0.097  ; N/A      ; N/A     ; -2.636              ;
-; Design-wide TNS                                           ; -14617.737 ; -0.083 ; -4.456   ; 0.0     ; -2665.243           ;
-;  CLOCK_50                                                 ; -14190.558 ; -0.083 ; N/A      ; N/A     ; -2568.113           ;
-;  MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; N/A        ; N/A    ; -4.456   ; 0.000   ; -0.884              ;
-;  MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -429.160   ; 0.000  ; N/A      ; N/A     ; -97.288             ;
+; Worst-case Slack                                          ; -9.852     ; -0.237 ; -4.709   ; 0.761   ; -2.636              ;
+;  CLOCK_50                                                 ; -9.852     ; -0.237 ; N/A      ; N/A     ; -2.636              ;
+;  MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; N/A        ; N/A    ; -4.709   ; 0.761   ; -0.538              ;
+;  MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -7.215     ; 0.148  ; N/A      ; N/A     ; -2.636              ;
+; Design-wide TNS                                           ; -14378.313 ; -0.237 ; -4.709   ; 0.0     ; -2664.774           ;
+;  CLOCK_50                                                 ; -13986.791 ; -0.237 ; N/A      ; N/A     ; -2568.932           ;
+;  MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; N/A        ; N/A    ; -4.709   ; 0.000   ; -0.858              ;
+;  MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; -391.522   ; 0.000  ; N/A      ; N/A     ; -95.505             ;
 +-----------------------------------------------------------+------------+--------+----------+---------+---------------------+
 
 
@@ -789,10 +789,10 @@ No synchronizer chains to report.
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                               ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                 ; CLOCK_50                                     ; 367429   ; 0        ; 354      ; 0        ;
+; CLOCK_50                                                 ; CLOCK_50                                     ; 280036   ; 0        ; 366      ; 0        ;
 ; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; CLOCK_50                                     ; 2        ; 1        ; 0        ; 0        ;
 ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; CLOCK_50                                     ; 1        ; 1        ; 0        ; 0        ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 54956    ; 0        ; 0        ; 0        ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 25403    ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -802,10 +802,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                               ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                 ; CLOCK_50                                     ; 367429   ; 0        ; 354      ; 0        ;
+; CLOCK_50                                                 ; CLOCK_50                                     ; 280036   ; 0        ; 366      ; 0        ;
 ; MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick ; CLOCK_50                                     ; 2        ; 1        ; 0        ; 0        ;
 ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; CLOCK_50                                     ; 1        ; 1        ; 0        ; 0        ;
-; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 54956    ; 0        ; 0        ; 0        ;
+; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk             ; MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk ; 25403    ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -852,7 +852,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 100   ; 100  ;
 ; Unconstrained Output Ports      ; 66    ; 66   ;
-; Unconstrained Output Port Paths ; 9793  ; 9793 ;
+; Unconstrained Output Port Paths ; 9535  ; 9535 ;
 +---------------------------------+-------+------+
 
 
@@ -1041,7 +1041,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 12 13:00:25 2022
+    Info: Processing started: Mon Dec 12 19:14:00 2022
 Info: Command: quartus_sta MIPSExpo -c MIPSExpo
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1059,124 +1059,124 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.052
+Info (332146): Worst-case setup slack is -9.852
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.052          -14190.558 CLOCK_50 
-    Info (332119):    -9.058            -427.179 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+    Info (332119):    -9.852          -13986.791 CLOCK_50 
+    Info (332119):    -7.057            -391.522 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
 Info (332146): Worst-case hold slack is 0.344
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.344               0.000 CLOCK_50 
-    Info (332119):     0.391               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-Info (332146): Worst-case recovery slack is -4.296
+    Info (332119):     0.473               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case recovery slack is -4.560
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.296              -4.296 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
-Info (332146): Worst-case removal slack is 1.681
+    Info (332119):    -4.560              -4.560 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+Info (332146): Worst-case removal slack is 1.823
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.681               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):     1.823               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -2533.472 CLOCK_50 
-    Info (332119):    -2.636             -97.288 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):    -0.538              -0.884 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):    -2.636           -2533.532 CLOCK_50 
+    Info (332119):    -2.636             -95.505 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+    Info (332119):    -0.538              -0.858 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.872
+Info (332146): Worst-case setup slack is -9.681
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.872          -13722.110 CLOCK_50 
-    Info (332119):    -9.290            -429.160 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-Info (332146): Worst-case hold slack is 0.320
+    Info (332119):    -9.681          -13303.923 CLOCK_50 
+    Info (332119):    -7.215            -386.871 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case hold slack is 0.112
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.320               0.000 CLOCK_50 
-    Info (332119):     0.394               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-Info (332146): Worst-case recovery slack is -4.456
+    Info (332119):     0.112               0.000 CLOCK_50 
+    Info (332119):     0.434               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case recovery slack is -4.709
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.456              -4.456 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
-Info (332146): Worst-case removal slack is 1.934
+    Info (332119):    -4.709              -4.709 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+Info (332146): Worst-case removal slack is 2.071
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.934               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):     2.071               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -2568.113 CLOCK_50 
-    Info (332119):    -2.636             -96.246 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):    -0.538              -0.884 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):    -2.636           -2568.932 CLOCK_50 
+    Info (332119):    -2.636             -94.987 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+    Info (332119):    -0.538              -0.855 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.636
+Info (332146): Worst-case setup slack is -4.490
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.636           -6486.514 CLOCK_50 
-    Info (332119):    -4.519            -194.060 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-Info (332146): Worst-case hold slack is 0.114
+    Info (332119):    -4.490           -6485.214 CLOCK_50 
+    Info (332119):    -3.333            -178.383 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case hold slack is 0.033
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.114               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):     0.174               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -1.966
+    Info (332119):     0.033               0.000 CLOCK_50 
+    Info (332119):     0.177               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case recovery slack is -1.991
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.966              -1.966 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
-Info (332146): Worst-case removal slack is 0.717
+    Info (332119):    -1.991              -1.991 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+Info (332146): Worst-case removal slack is 0.761
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.717               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):     0.761               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -631.890 CLOCK_50 
-    Info (332119):    -2.174             -34.477 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):    -0.066              -0.066 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):    -2.174            -632.177 CLOCK_50 
+    Info (332119):    -2.174             -34.162 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+    Info (332119):    -0.035              -0.035 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.135
+Info (332146): Worst-case setup slack is -4.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.135            -173.206 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):    -4.130           -5568.235 CLOCK_50 
-Info (332146): Worst-case hold slack is -0.083
+    Info (332119):    -4.004           -5539.316 CLOCK_50 
+    Info (332119):    -3.084            -158.349 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case hold slack is -0.237
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.083              -0.083 CLOCK_50 
-    Info (332119):     0.097               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-Info (332146): Worst-case recovery slack is -1.871
+    Info (332119):    -0.237              -0.237 CLOCK_50 
+    Info (332119):     0.148               0.000 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+Info (332146): Worst-case recovery slack is -1.898
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.871              -1.871 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
-Info (332146): Worst-case removal slack is 0.785
+    Info (332119):    -1.898              -1.898 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+Info (332146): Worst-case removal slack is 0.825
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.785               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):     0.825               0.000 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -632.577 CLOCK_50 
-    Info (332119):    -2.174             -34.254 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
-    Info (332119):    -0.041              -0.041 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
+    Info (332119):    -2.174            -632.717 CLOCK_50 
+    Info (332119):    -2.174             -34.034 MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk 
+    Info (332119):    -0.010              -0.010 MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 854 megabytes
-    Info: Processing ended: Mon Dec 12 13:00:33 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 850 megabytes
+    Info: Processing ended: Mon Dec 12 19:14:06 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 

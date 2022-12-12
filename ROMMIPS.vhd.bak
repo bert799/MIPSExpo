@@ -6,7 +6,7 @@ entity ROMMIPS IS
    generic (
           dataWidth: natural := 32;
           addrWidth: natural := 32;
-       memoryAddrWidth:  natural := 10 );   -- 64 posicoes de 32 bits cada
+       memoryAddrWidth:  natural := 6 );   -- 64 posicoes de 32 bits cada
    port (
           Endereco : in  std_logic_vector (addrWidth-1 downto 0);
           Dado     : out std_logic_vector (dataWidth-1 downto 0) );
@@ -24,7 +24,7 @@ tmp(1) := x"2011000a"; -- addi $s1, $zero, 0 #posição coluna s1 1f
 tmp(2) := x"20120000"; -- addi $s2, $zero, 0 #posição prox coluna s2
 tmp(3) := x"20130001"; -- addi $s3, $zero, 1 #carrega 1 para comparar
 tmp(4) := x"20140001"; -- addi $s4, $zero, 1 #frame da animação
-tmp(5) := x"20150084"; -- addi $s5, $zero, 4 #frame da animação
+tmp(5) := x"20150004"; -- addi $s5, $zero, 4 #frame da animação
 tmp(6) := x"20160001"; -- addi $s6, $zero, 6 #frame da animação
 tmp(7) := x"20170001"; -- addi $s7, $zero, 1 #frame da animação
 --LOOP PRINCIPAL
@@ -46,15 +46,15 @@ tmp(20) := x"11330006"; -- beq $t1 $s3 0x6
 tmp(21) := x"00000000"; -- nop
 tmp(22) := x"00000000"; -- nop
 tmp(23) := x"00000000"; -- nop
-tmp(24) := x"0c000044"; -- jal reset_frames s4
+tmp(24) := x"0c000043"; -- jal reset_frames s4
 tmp(25) := x"00000000"; -- nop
 tmp(26) := x"00000000"; -- nop
-tmp(27) := x"2AAA0086"; -- slti $t2 $s5 0x6 #confere que não acabaram os frames de animação 2
+tmp(27) := x"2AAA0007"; -- slti $t2 $s5 0x7 #confere que não acabaram os frames de animação 2
 tmp(28) := x"11530006"; -- beq $t2 $s3 0x6
 tmp(29) := x"00000000"; -- nop
 tmp(30) := x"00000000"; -- nop
 tmp(31) := x"00000000"; -- nop
-tmp(32) := x"0c000049"; -- jal reset_frames s5
+tmp(32) := x"0c000046"; -- jal reset_frames s5
 tmp(33) := x"00000000"; -- nop
 tmp(34) := x"00000000"; -- nop
 tmp(35) := x"2ACBFFFF"; -- slti $t3 $s6 0xFFFF #confere que não acabaram os frames de animação 3
@@ -62,7 +62,7 @@ tmp(36) := x"11730006"; -- beq $t3 $s3 0x6
 tmp(37) := x"00000000"; -- nop
 tmp(38) := x"00000000"; -- nop
 tmp(39) := x"00000000"; -- nop
-tmp(40) := x"0c00004e"; -- jal reset_frames s6
+tmp(40) := x"0c000049"; -- jal reset_frames s6
 tmp(41) := x"00000000"; -- nop
 tmp(42) := x"00000000"; -- nop 
 tmp(43) := x"2AECFFFF"; -- slti $t4 $s7 0xFFFF #confere que não acabaram os frames de animação 4
@@ -70,7 +70,7 @@ tmp(44) := x"11930006"; -- beq $t4 $s3 0x6
 tmp(45) := x"00000000"; -- nop
 tmp(46) := x"00000000"; -- nop
 tmp(47) := x"00000000"; -- nop
-tmp(48) := x"0c000053"; -- jal reset_frames s7
+tmp(48) := x"0c00004c"; -- jal reset_frames s7
 tmp(49) := x"00000000"; -- nop
 tmp(50) := x"00000000"; -- nop
 --Display Frame
@@ -79,51 +79,43 @@ tmp(52) := x"ac000083"; -- sw $zero, 131($zero) #escreve tela
 -- Animação s4
 tmp(53) := x"ac100080"; -- sw $s0, 128($zero) #Grava linha
 tmp(54) := x"ac110081"; -- sw $s1, 129($zero) #Grava coluna
-tmp(55) := x"22310001"; -- addi $s1 $s1 0x1 # incrementa coluna
+tmp(55) := x"22310001"; -- += coluna
 tmp(56) := x"ac140082"; -- sw $s4, 130($zero) #Grava frame
-tmp(57) := x"ac000083"; -- sw $zero, 131($zero) #escreve tela
 -- Animação s5
-tmp(58) := x"ac100080"; -- sw $s0, 128($zero) #Grava linha
-tmp(59) := x"ac110081"; -- sw $s1, 129($zero) #Grava coluna
---tmp(27) := x"22310001"; -- addi $s1 $s1 0x1
-tmp(60) := x"AC150082"; -- sw $s5, 130($zero) #Grava frame
+tmp(57) := x"ac100080"; -- sw $s0, 128($zero) #Grava linha
+tmp(58) := x"ac110081"; -- sw $s1, 129($zero) #Grava coluna
+--tmp(27) := x"22310001"; -- += coluna
+tmp(59) := x"AC150130"; -- sw $s5, 130($zero) #Grava frame
+
+tmp(60) := x"2011000a"; -- reseta colunas
+
 tmp(61) := x"ac000083"; -- sw $zero, 131($zero) #escreve tela
-
-tmp(62) := x"2011000a"; -- reseta colunas
-
 -- Prepara Próximos frames
-tmp(63) := x"22940001"; -- addi $s4, $s4, 0x1 
-tmp(64) := x"22B50001"; -- addi $s5 $s5 0x1 
+tmp(62) := x"22940001"; -- addi $s4, $s4, 0x1 
+tmp(63) := x"22B50001"; -- addi $s5 $s5 0x1 
 
-tmp(65) := x"08000008"; -- j loop_principal
+tmp(64) := x"08000008"; -- j loop_principal
+tmp(65) := x"00000000"; -- nop
 tmp(66) := x"00000000"; -- nop
-tmp(67) := x"00000000"; -- nop
 --Reset Frames s4
-tmp(68) := x"20140001"; -- addi $s4, $zero, 1 #frame da animação
-tmp(69) := x"20090000"; -- addi $t1, $zero, 0 #zera conferência
-tmp(70) := x"03e00008"; -- jr $ra
-tmp(71) := x"00000000"; -- nop
-tmp(72) := x"00000000"; -- nop
+tmp(67) := x"20140001"; -- addi $s4, $zero, 1 #frame da animação
+tmp(68) := x"20090000"; -- addi $t1, $zero, 0 #zera conferência
+tmp(69) := x"03e00008"; -- jr $ra
 
 --Reset Frames s5
-tmp(73) := x"20150084"; -- addi $s5, $zero, 4 #frame da animação
-tmp(74) := x"200A0000"; -- addi $t2, $zero, 0 #zera conferência
-tmp(75) := x"03e00008"; -- jr $ra 
-tmp(76) := x"00000000"; -- nop
-tmp(77) := x"00000000"; -- nop
+tmp(70) := x"20150004"; -- addi $s5, $zero, 4 #frame da animação
+tmp(71) := x"200A0000"; -- addi $t2, $zero, 0 #zera conferência
+tmp(72) := x"03e00008"; -- jr $ra 
 
 --Reset Frames s6
-tmp(78) := x"20160001"; -- addi $s6, $zero, 6 #frame da animação
-tmp(79) := x"20090000"; -- addi $t3, $zero, 0 #zera conferência
-tmp(80) := x"03e00008"; -- jr $ra 
-tmp(81) := x"00000000"; -- nop
-tmp(82) := x"00000000"; -- nop
+tmp(73) := x"20140001"; -- addi $s6, $zero, 6 #frame da animação
+tmp(74) := x"20090000"; -- addi $t3, $zero, 0 #zera conferência
+tmp(75) := x"03e00008"; -- jr $ra 
 
 --Reset Frames s7
-tmp(83) := x"20170001"; -- addi $s7, $zero, 1 #frame da animação
-tmp(84) := x"20090000"; -- addi $t4, $zero, 0 #zera conferência
-tmp(85) := x"03e00008"; -- jr $ra 
-
+tmp(76) := x"20140001"; -- addi $s7, $zero, 1 #frame da animação
+tmp(77) := x"20090000"; -- addi $t4, $zero, 0 #zera conferência
+tmp(78) := x"03e00008"; -- jr $ra 
   
   
 ------------------------------------------------------------------------------------------------------------

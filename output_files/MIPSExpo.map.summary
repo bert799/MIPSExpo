@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Dec 12 12:59:25 2022
+Analysis & Synthesis Status : Successful - Mon Dec 12 19:13:15 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPSExpo
 Top-level Entity Name : MIPSExpo
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2628
+Total registers : 2635
 Total pins : 82
 Total virtual pins : 0
 Total block memory bits : 6,144

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPSExpo
-Mon Dec 12 12:59:25 2022
+Mon Dec 12 19:13:15 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -217,13 +217,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 12 12:59:25 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 12 19:13:15 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPSExpo                                    ;
 ; Top-level Entity Name           ; MIPSExpo                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2628                                        ;
+; Total registers                 ; 2635                                        ;
 ; Total pins                      ; 82                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 6,144                                       ;
@@ -411,16 +411,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2155           ;
+; Estimate of Logic utilization (ALMs needed) ; 2001           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2178           ;
-;     -- 7 input functions                    ; 113            ;
-;     -- 6 input functions                    ; 1246           ;
-;     -- 5 input functions                    ; 208            ;
-;     -- 4 input functions                    ; 262            ;
-;     -- <=3 input functions                  ; 349            ;
+; Combinational ALUT usage for logic          ; 1829           ;
+;     -- 7 input functions                    ; 37             ;
+;     -- 6 input functions                    ; 1110           ;
+;     -- 5 input functions                    ; 232            ;
+;     -- 4 input functions                    ; 149            ;
+;     -- <=3 input functions                  ; 301            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 2628           ;
+; Dedicated logic registers                   ; 2635           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 82             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -429,9 +429,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 2642           ;
-; Total fan-out                               ; 19833          ;
-; Average fan-out                             ; 3.93           ;
+; Maximum fan-out                             ; 2649           ;
+; Total fan-out                               ; 18083          ;
+; Average fan-out                             ; 3.85           ;
 +---------------------------------------------+----------------+
 
 
@@ -440,19 +440,20 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                        ; Entity Name                     ; Library Name ;
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |MIPSExpo                                                 ; 2178 (0)            ; 2628 (0)                  ; 6144              ; 0          ; 82   ; 0            ; |MIPSExpo                                                                                                                                                                                  ; MIPSExpo                        ; work         ;
-;    |DECODE:DECODE|                                        ; 66 (6)              ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE                                                                                                                                                                    ; DECODE                          ; work         ;
-;       |ComponenteDeControle:DECODER|                      ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|ComponenteDeControle:DECODER                                                                                                                                       ; ComponenteDeControle            ; work         ;
+; |MIPSExpo                                                 ; 1829 (0)            ; 2635 (0)                  ; 6144              ; 0          ; 82   ; 0            ; |MIPSExpo                                                                                                                                                                                  ; MIPSExpo                        ; work         ;
+;    |DECODE:DECODE|                                        ; 69 (7)              ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE                                                                                                                                                                    ; DECODE                          ; work         ;
+;       |ComponenteDeControle:DECODER|                      ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|ComponenteDeControle:DECODER                                                                                                                                       ; ComponenteDeControle            ; work         ;
 ;          |UnidadeDeControle:UnidadeDeControle|            ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|ComponenteDeControle:DECODER|UnidadeDeControle:UnidadeDeControle                                                                                                   ; UnidadeDeControle               ; work         ;
-;          |muxGenerico2x1:MUX_ULA_OP|                      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|ComponenteDeControle:DECODER|muxGenerico2x1:MUX_ULA_OP                                                                                                             ; muxGenerico2x1                  ; work         ;
+;          |muxGenerico2x1:MUX_ULA_OP|                      ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|ComponenteDeControle:DECODER|muxGenerico2x1:MUX_ULA_OP                                                                                                             ; muxGenerico2x1                  ; work         ;
 ;       |bancoReg:REG_BLOCK|                                ; 34 (34)             ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|bancoReg:REG_BLOCK                                                                                                                                                 ; bancoReg                        ; work         ;
 ;          |altsyncram:registrador_rtl_0|                   ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|bancoReg:REG_BLOCK|altsyncram:registrador_rtl_0                                                                                                                    ; altsyncram                      ; work         ;
 ;             |altsyncram_tfp1:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|bancoReg:REG_BLOCK|altsyncram:registrador_rtl_0|altsyncram_tfp1:auto_generated                                                                                     ; altsyncram_tfp1                 ; work         ;
 ;          |altsyncram:registrador_rtl_1|                   ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|bancoReg:REG_BLOCK|altsyncram:registrador_rtl_1                                                                                                                    ; altsyncram                      ; work         ;
 ;             |altsyncram_tfp1:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|bancoReg:REG_BLOCK|altsyncram:registrador_rtl_1|altsyncram_tfp1:auto_generated                                                                                     ; altsyncram_tfp1                 ; work         ;
+;       |estendeSinalGenerico:Estende_imediato|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|estendeSinalGenerico:Estende_imediato                                                                                                                              ; estendeSinalGenerico            ; work         ;
 ;       |muxGenerico2x1:MUX_PAL_STALL|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|DECODE:DECODE|muxGenerico2x1:MUX_PAL_STALL                                                                                                                                       ; muxGenerico2x1                  ; work         ;
-;    |EXECUTE:EXECUTE|                                      ; 277 (4)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE                                                                                                                                                                  ; EXECUTE                         ; work         ;
-;       |ULAMIPS:ULA|                                       ; 199 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA                                                                                                                                                      ; ULAMIPS                         ; work         ;
+;    |EXECUTE:EXECUTE|                                      ; 275 (4)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE                                                                                                                                                                  ; EXECUTE                         ; work         ;
+;       |ULAMIPS:ULA|                                       ; 197 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA                                                                                                                                                      ; ULAMIPS                         ; work         ;
 ;          |ULAbit31:ULAbit31|                              ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit31:ULAbit31                                                                                                                                    ; ULAbit31                        ; work         ;
 ;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit31:ULAbit31|mux2x1:MUXB                                                                                                                        ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit31:ULAbit31|mux4x1:MUXOUT                                                                                                                      ; mux4x1                          ; work         ;
@@ -469,8 +470,8 @@ https://fpgasoftware.intel.com/eula.
 ;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit11|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit11|mux4x1:MUXOUT                                                                                                                        ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit11|somador1Bit:SOM                                                                                                                      ; somador1Bit                     ; work         ;
-;          |ULAbit:ULAbit12|                                ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12                                                                                                                                      ; ULAbit                          ; work         ;
-;             |mux2x1:MUXB|                                 ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
+;          |ULAbit:ULAbit12|                                ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12                                                                                                                                      ; ULAbit                          ; work         ;
+;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12|mux4x1:MUXOUT                                                                                                                        ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12|somador1Bit:SOM                                                                                                                      ; somador1Bit                     ; work         ;
 ;          |ULAbit:ULAbit13|                                ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit13                                                                                                                                      ; ULAbit                          ; work         ;
@@ -505,12 +506,12 @@ https://fpgasoftware.intel.com/eula.
 ;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit1|mux2x1:MUXB                                                                                                                           ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit1|mux4x1:MUXOUT                                                                                                                         ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit1|somador1Bit:SOM                                                                                                                       ; somador1Bit                     ; work         ;
-;          |ULAbit:ULAbit20|                                ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20                                                                                                                                      ; ULAbit                          ; work         ;
+;          |ULAbit:ULAbit20|                                ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20                                                                                                                                      ; ULAbit                          ; work         ;
 ;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20|mux4x1:MUXOUT                                                                                                                        ; mux4x1                          ; work         ;
-;             |somador1Bit:SOM|                             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20|somador1Bit:SOM                                                                                                                      ; somador1Bit                     ; work         ;
-;          |ULAbit:ULAbit21|                                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21                                                                                                                                      ; ULAbit                          ; work         ;
-;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
+;             |somador1Bit:SOM|                             ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit20|somador1Bit:SOM                                                                                                                      ; somador1Bit                     ; work         ;
+;          |ULAbit:ULAbit21|                                ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21                                                                                                                                      ; ULAbit                          ; work         ;
+;             |mux2x1:MUXB|                                 ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21|mux2x1:MUXB                                                                                                                          ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21|mux4x1:MUXOUT                                                                                                                        ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21|somador1Bit:SOM                                                                                                                      ; somador1Bit                     ; work         ;
 ;          |ULAbit:ULAbit22|                                ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit22                                                                                                                                      ; ULAbit                          ; work         ;
@@ -563,8 +564,8 @@ https://fpgasoftware.intel.com/eula.
 ;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit5|mux2x1:MUXB                                                                                                                           ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit5|mux4x1:MUXOUT                                                                                                                         ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit5|somador1Bit:SOM                                                                                                                       ; somador1Bit                     ; work         ;
-;          |ULAbit:ULAbit6|                                 ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6                                                                                                                                       ; ULAbit                          ; work         ;
-;             |mux2x1:MUXB|                                 ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6|mux2x1:MUXB                                                                                                                           ; mux2x1                          ; work         ;
+;          |ULAbit:ULAbit6|                                 ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6                                                                                                                                       ; ULAbit                          ; work         ;
+;             |mux2x1:MUXB|                                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6|mux2x1:MUXB                                                                                                                           ; mux2x1                          ; work         ;
 ;             |mux4x1:MUXOUT|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6|mux4x1:MUXOUT                                                                                                                         ; mux4x1                          ; work         ;
 ;             |somador1Bit:SOM|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6|somador1Bit:SOM                                                                                                                       ; somador1Bit                     ; work         ;
 ;          |ULAbit:ULAbit7|                                 ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit7                                                                                                                                       ; ULAbit                          ; work         ;
@@ -583,23 +584,22 @@ https://fpgasoftware.intel.com/eula.
 ;       |muxGenerico4x1:MUX_FOR_A|                          ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|muxGenerico4x1:MUX_FOR_A                                                                                                                                         ; muxGenerico4x1                  ; work         ;
 ;       |muxGenerico4x1:MUX_RD_ADDR|                        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|muxGenerico4x1:MUX_RD_ADDR                                                                                                                                       ; muxGenerico4x1                  ; work         ;
 ;       |somadorGenerico:puloPCBEQ|                         ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|EXECUTE:EXECUTE|somadorGenerico:puloPCBEQ                                                                                                                                        ; somadorGenerico                 ; work         ;
-;    |FETCH:FETCH|                                          ; 89 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH                                                                                                                                                                      ; FETCH                           ; work         ;
-;       |ROMMIPS:ROM|                                       ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|ROMMIPS:ROM                                                                                                                                                          ; ROMMIPS                         ; work         ;
+;    |FETCH:FETCH|                                          ; 154 (0)             ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH                                                                                                                                                                      ; FETCH                           ; work         ;
+;       |ROMMIPS:ROM|                                       ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|ROMMIPS:ROM                                                                                                                                                          ; ROMMIPS                         ; work         ;
 ;       |muxGenerico2x1:MUX_PC_JR|                          ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|muxGenerico2x1:MUX_PC_JR                                                                                                                                             ; muxGenerico2x1                  ; work         ;
-;       |registradorGenerico:PC|                            ; 4 (4)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC                                                                                                                                               ; registradorGenerico             ; work         ;
+;       |registradorGenerico:PC|                            ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC                                                                                                                                               ; registradorGenerico             ; work         ;
 ;       |somaConstante:incrementaPC|                        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|FETCH:FETCH|somaConstante:incrementaPC                                                                                                                                           ; somaConstante                   ; work         ;
-;    |MEM_ACCESS:MEM|                                       ; 1637 (17)           ; 2153 (0)                  ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM                                                                                                                                                                   ; MEM_ACCESS                      ; work         ;
+;    |MEM_ACCESS:MEM|                                       ; 1222 (17)           ; 2153 (0)                  ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM                                                                                                                                                                   ; MEM_ACCESS                      ; work         ;
 ;       |RAMMIPS:RAM|                                       ; 803 (803)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|RAMMIPS:RAM                                                                                                                                                       ; RAMMIPS                         ; work         ;
 ;       |divisorGenerico:BaseDeTempoUmSegundo|              ; 28 (28)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo                                                                                                                              ; divisorGenerico                 ; work         ;
-;       |driverVGA:driverVGA|                               ; 789 (1)             ; 58 (1)                    ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA                                                                                                                                               ; driverVGA                       ; work         ;
+;       |driverVGA:driverVGA|                               ; 374 (1)             ; 58 (1)                    ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA                                                                                                                                               ; driverVGA                       ; work         ;
 ;          |calcMemAddr:CalcMemAddr|                        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|calcMemAddr:CalcMemAddr                                                                                                                       ; calcMemAddr                     ; work         ;
 ;             |somadorGenerico:CalcPosVIDEO_A|              ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|calcMemAddr:CalcMemAddr|somadorGenerico:CalcPosVIDEO_A                                                                                        ; somadorGenerico                 ; work         ;
 ;             |somadorGenerico:CalcPosVIDEO_B|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|calcMemAddr:CalcMemAddr|somadorGenerico:CalcPosVIDEO_B                                                                                        ; somadorGenerico                 ; work         ;
-;          |interfaceVGA:interface|                         ; 776 (0)             ; 57 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface                                                                                                                        ; interfaceVGA                    ; work         ;
+;          |interfaceVGA:interface|                         ; 361 (0)             ; 57 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface                                                                                                                        ; interfaceVGA                    ; work         ;
 ;             |controladorVGA:ctrl|                         ; 111 (111)           ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl                                                                                                    ; controladorVGA                  ; work         ;
-;             |geradorCaracteres:charGen|                   ; 665 (13)            ; 12 (12)                   ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen                                                                                              ; geradorCaracteres               ; work         ;
-;                |ROMcaracteres:\tipoROM:caracROM|          ; 644 (644)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|ROMcaracteres:\tipoROM:caracROM                                                              ; ROMcaracteres                   ; work         ;
-;                |muxGenerico:muxPixel|                     ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|muxGenerico:muxPixel                                                                         ; muxGenerico                     ; work         ;
+;             |geradorCaracteres:charGen|                   ; 250 (13)            ; 12 (12)                   ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen                                                                                              ; geradorCaracteres               ; work         ;
+;                |muxGenerico:muxPixel|                     ; 237 (237)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|muxGenerico:muxPixel                                                                         ; muxGenerico                     ; work         ;
 ;                |simple_dual_port_ram_dual_clock:caracRAM| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|simple_dual_port_ram_dual_clock:caracRAM                                                     ; simple_dual_port_ram_dual_clock ; work         ;
 ;                   |altsyncram:ram_rtl_0|                  ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|simple_dual_port_ram_dual_clock:caracRAM|altsyncram:ram_rtl_0                                ; altsyncram                      ; work         ;
 ;                      |altsyncram_2iq1:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|simple_dual_port_ram_dual_clock:caracRAM|altsyncram:ram_rtl_0|altsyncram_2iq1:auto_generated ; altsyncram_2iq1                 ; work         ;
@@ -616,10 +616,10 @@ https://fpgasoftware.intel.com/eula.
 ;    |conversorHex7Seg:H4|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|conversorHex7Seg:H4                                                                                                                                                              ; conversorHex7Seg                ; work         ;
 ;    |conversorHex7Seg:H5|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|conversorHex7Seg:H5                                                                                                                                                              ; conversorHex7Seg                ; work         ;
 ;    |muxGenerico4x1:MUX_Display|                           ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|muxGenerico4x1:MUX_Display                                                                                                                                                       ; muxGenerico4x1                  ; work         ;
-;    |registradorGenerico:REG_EX_MEM|                       ; 0 (0)               ; 148 (148)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_EX_MEM                                                                                                                                                   ; registradorGenerico             ; work         ;
-;    |registradorGenerico:REG_ID_EX|                        ; 3 (3)               ; 127 (127)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_ID_EX                                                                                                                                                    ; registradorGenerico             ; work         ;
-;    |registradorGenerico:REG_IF_ID|                        ; 0 (0)               ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_IF_ID                                                                                                                                                    ; registradorGenerico             ; work         ;
-;    |registradorGenerico:REG_MEM_WB|                       ; 0 (0)               ; 113 (113)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_MEM_WB                                                                                                                                                   ; registradorGenerico             ; work         ;
+;    |registradorGenerico:REG_EX_MEM|                       ; 0 (0)               ; 149 (149)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_EX_MEM                                                                                                                                                   ; registradorGenerico             ; work         ;
+;    |registradorGenerico:REG_ID_EX|                        ; 3 (3)               ; 130 (130)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_ID_EX                                                                                                                                                    ; registradorGenerico             ; work         ;
+;    |registradorGenerico:REG_IF_ID|                        ; 0 (0)               ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_IF_ID                                                                                                                                                    ; registradorGenerico             ; work         ;
+;    |registradorGenerico:REG_MEM_WB|                       ; 0 (0)               ; 114 (114)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPSExpo|registradorGenerico:REG_MEM_WB                                                                                                                                                   ; registradorGenerico             ; work         ;
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -683,23 +683,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registradorGenerico:REG_ID_EX|DOUT[1]                                                                           ; Merged with registradorGenerico:REG_ID_EX|DOUT[160]                                                                        ;
 ; registradorGenerico:REG_ID_EX|DOUT[0]                                                                           ; Merged with registradorGenerico:REG_ID_EX|DOUT[159]                                                                        ;
 ; registradorGenerico:REG_ID_EX|DOUT[17..31]                                                                      ; Merged with registradorGenerico:REG_ID_EX|DOUT[16]                                                                         ;
-; registradorGenerico:REG_IF_ID|DOUT[10..15]                                                                      ; Merged with registradorGenerico:REG_IF_ID|DOUT[30]                                                                         ;
-; registradorGenerico:REG_IF_ID|DOUT[23]                                                                          ; Merged with registradorGenerico:REG_IF_ID|DOUT[25]                                                                         ;
-; registradorGenerico:REG_IF_ID|DOUT[4]                                                                           ; Merged with registradorGenerico:REG_IF_ID|DOUT[8]                                                                          ;
+; registradorGenerico:REG_IF_ID|DOUT[10..14]                                                                      ; Merged with registradorGenerico:REG_IF_ID|DOUT[15]                                                                         ;
+; registradorGenerico:REG_IF_ID|DOUT[5]                                                                           ; Merged with registradorGenerico:REG_IF_ID|DOUT[8]                                                                          ;
 ; registradorGenerico:REG_ID_EX|DOUT[169..173]                                                                    ; Merged with registradorGenerico:REG_ID_EX|DOUT[174]                                                                        ;
-; registradorGenerico:REG_ID_EX|DOUT[163]                                                                         ; Merged with registradorGenerico:REG_ID_EX|DOUT[167]                                                                        ;
-; registradorGenerico:REG_ID_EX|DOUT[34]                                                                          ; Merged with registradorGenerico:REG_ID_EX|DOUT[36]                                                                         ;
+; registradorGenerico:REG_ID_EX|DOUT[164]                                                                         ; Merged with registradorGenerico:REG_ID_EX|DOUT[167]                                                                        ;
 ; registradorGenerico:REG_EX_MEM|DOUT[64..68]                                                                     ; Merged with registradorGenerico:REG_EX_MEM|DOUT[69]                                                                        ;
-; registradorGenerico:REG_EX_MEM|DOUT[58]                                                                         ; Merged with registradorGenerico:REG_EX_MEM|DOUT[62]                                                                        ;
+; registradorGenerico:REG_EX_MEM|DOUT[59]                                                                         ; Merged with registradorGenerico:REG_EX_MEM|DOUT[62]                                                                        ;
 ; registradorGenerico:REG_MEM_WB|DOUT[90..94]                                                                     ; Merged with registradorGenerico:REG_MEM_WB|DOUT[95]                                                                        ;
-; registradorGenerico:REG_MEM_WB|DOUT[84]                                                                         ; Merged with registradorGenerico:REG_MEM_WB|DOUT[88]                                                                        ;
+; registradorGenerico:REG_MEM_WB|DOUT[85]                                                                         ; Merged with registradorGenerico:REG_MEM_WB|DOUT[88]                                                                        ;
 ; registradorGenerico:REG_IF_ID|DOUT[30]                                                                          ; Stuck at GND due to stuck port data_in                                                                                     ;
-; registradorGenerico:REG_ID_EX|DOUT[16,174]                                                                      ; Stuck at GND due to stuck port data_in                                                                                     ;
-; registradorGenerico:REG_EX_MEM|DOUT[69]                                                                         ; Stuck at GND due to stuck port data_in                                                                                     ;
-; registradorGenerico:REG_MEM_WB|DOUT[95]                                                                         ; Stuck at GND due to stuck port data_in                                                                                     ;
 ; MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|hor_Active_Window_Pixel_Count[10] ; Lost fanout                                                                                                                ;
 ; MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|vert_Active_Window_Line_Count[10] ; Lost fanout                                                                                                                ;
-; Total Number of Removed Registers = 141                                                                         ;                                                                                                                            ;
+; Total Number of Removed Registers = 134                                                                         ;                                                                                                                            ;
 +-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -708,39 +703,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------------------------+----------------------------------------------------------------------------------+
 ; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                                           ;
 +-----------------------------------------+---------------------------+----------------------------------------------------------------------------------+
-; registradorGenerico:REG_IF_ID|DOUT[30]  ; Stuck at GND              ; registradorGenerico:REG_ID_EX|DOUT[16], registradorGenerico:REG_ID_EX|DOUT[174], ;
-;                                         ; due to stuck port data_in ; registradorGenerico:REG_EX_MEM|DOUT[69], registradorGenerico:REG_MEM_WB|DOUT[95] ;
-; registradorGenerico:REG_ID_EX|DOUT[150] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[45], registradorGenerico:REG_MEM_WB|DOUT[71] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[143] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[38], registradorGenerico:REG_MEM_WB|DOUT[64] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[144] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[39], registradorGenerico:REG_MEM_WB|DOUT[65] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[145] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[40], registradorGenerico:REG_MEM_WB|DOUT[66] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[146] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[41], registradorGenerico:REG_MEM_WB|DOUT[67] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[147] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[42], registradorGenerico:REG_MEM_WB|DOUT[68] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[148] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[43], registradorGenerico:REG_MEM_WB|DOUT[69] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[149] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[44], registradorGenerico:REG_MEM_WB|DOUT[70] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
 ; registradorGenerico:REG_ID_EX|DOUT[158] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[53], registradorGenerico:REG_MEM_WB|DOUT[79] ;
 ;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[151] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[46], registradorGenerico:REG_MEM_WB|DOUT[72] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[152] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[47], registradorGenerico:REG_MEM_WB|DOUT[73] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[153] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[48], registradorGenerico:REG_MEM_WB|DOUT[74] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[154] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[49], registradorGenerico:REG_MEM_WB|DOUT[75] ;
-;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[155] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[50], registradorGenerico:REG_MEM_WB|DOUT[76] ;
+; registradorGenerico:REG_ID_EX|DOUT[157] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[52], registradorGenerico:REG_MEM_WB|DOUT[78] ;
 ;                                         ; due to stuck port data_in ;                                                                                  ;
 ; registradorGenerico:REG_ID_EX|DOUT[156] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[51], registradorGenerico:REG_MEM_WB|DOUT[77] ;
 ;                                         ; due to stuck port data_in ;                                                                                  ;
-; registradorGenerico:REG_ID_EX|DOUT[157] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[52], registradorGenerico:REG_MEM_WB|DOUT[78] ;
+; registradorGenerico:REG_ID_EX|DOUT[155] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[50], registradorGenerico:REG_MEM_WB|DOUT[76] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[154] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[49], registradorGenerico:REG_MEM_WB|DOUT[75] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[153] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[48], registradorGenerico:REG_MEM_WB|DOUT[74] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[152] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[47], registradorGenerico:REG_MEM_WB|DOUT[73] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[151] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[46], registradorGenerico:REG_MEM_WB|DOUT[72] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[150] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[45], registradorGenerico:REG_MEM_WB|DOUT[71] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[149] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[44], registradorGenerico:REG_MEM_WB|DOUT[70] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[148] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[43], registradorGenerico:REG_MEM_WB|DOUT[69] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[147] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[42], registradorGenerico:REG_MEM_WB|DOUT[68] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[146] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[41], registradorGenerico:REG_MEM_WB|DOUT[67] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[145] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[40], registradorGenerico:REG_MEM_WB|DOUT[66] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[144] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[39], registradorGenerico:REG_MEM_WB|DOUT[65] ;
+;                                         ; due to stuck port data_in ;                                                                                  ;
+; registradorGenerico:REG_ID_EX|DOUT[143] ; Stuck at GND              ; registradorGenerico:REG_EX_MEM|DOUT[38], registradorGenerico:REG_MEM_WB|DOUT[64] ;
 ;                                         ; due to stuck port data_in ;                                                                                  ;
 +-----------------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
@@ -750,12 +743,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2628  ;
-; Number of registers using Synchronous Clear  ; 73    ;
+; Total registers                              ; 2635  ;
+; Number of registers using Synchronous Clear  ; 70    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2179  ;
+; Number of registers using Clock Enable       ; 2181  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -776,22 +769,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|vert_count[1]                    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC|DOUT[0]                                                                     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC|DOUT[13]                                                                    ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC|DOUT[25]                                                                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|hor_Active_Window_Pixel_Count[5] ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|vert_Active_Window_Line_Count[3] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[186]                                                                        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[177]                                                                        ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[184]                                                                        ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|FETCH:FETCH|registradorGenerico:PC|DOUT[2]                                                                     ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|hor_Active_Window_Pixel_Count[9] ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|vert_Active_Window_Line_Count[5] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[181]                                                                        ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[176]                                                                        ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MIPSExpo|registradorGenerico:REG_ID_EX|DOUT[188]                                                                        ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|controladorVGA:ctrl|vert_count                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|blue                       ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|WRITE_BACK:WB|muxGenerico4x1:MUX_ULA_RAM|saida_MUX[15]                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|WRITE_BACK:WB|muxGenerico4x1:MUX_ULA_RAM|saida_MUX[18]                                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPSExpo|MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|green                      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|WRITE_BACK:WB|muxGenerico4x1:MUX_ULA_RAM|saida_MUX[2]                                                          ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|WRITE_BACK:WB|muxGenerico4x1:MUX_ULA_RAM|saida_MUX[23]                                                         ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|muxGenerico4x1:MUX_FOR_A|saida_MUX[12]                                                         ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit17|mux4x1:MUXOUT|saida_MUX                                            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|muxGenerico4x1:MUX_Display|saida_MUX[31]                                                                       ;
-; 10:1               ; 22 bits   ; 132 LEs       ; 132 LEs              ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit12|mux2x1:MUXB|saida_MUX                                              ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit6|mux2x1:MUXB|saida_MUX                                               ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit3|mux4x1:MUXOUT|saida_MUX                                             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPSExpo|muxGenerico4x1:MUX_Display|saida_MUX[8]                                                                        ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |MIPSExpo|EXECUTE:EXECUTE|ULAMIPS:ULA|ULAbit:ULAbit21|mux2x1:MUXB|saida_MUX                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -874,7 +865,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+--------------------------------------------+
 ; datawidth       ; 32    ; Signed Integer                             ;
 ; addrwidth       ; 32    ; Signed Integer                             ;
-; memoryaddrwidth ; 6     ; Signed Integer                             ;
+; memoryaddrwidth ; 10    ; Signed Integer                             ;
 +-----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2679,32 +2670,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2628                        ;
+; arriav_ff             ; 2635                        ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 2176                        ;
-;     ENA SCLR          ; 3                           ;
+;     ENA               ; 2181                        ;
 ;     SCLR              ; 70                          ;
-;     plain             ; 378                         ;
-; arriav_lcell_comb     ; 2178                        ;
+;     plain             ; 383                         ;
+; arriav_lcell_comb     ; 1829                        ;
 ;     arith             ; 141                         ;
-;         1 data inputs ; 114                         ;
-;         2 data inputs ; 23                          ;
+;         1 data inputs ; 94                          ;
+;         2 data inputs ; 43                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 3                           ;
-;     extend            ; 113                         ;
-;         7 data inputs ; 113                         ;
-;     normal            ; 1924                        ;
+;     extend            ; 37                          ;
+;         7 data inputs ; 37                          ;
+;     normal            ; 1651                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 141                         ;
-;         3 data inputs ; 68                          ;
-;         4 data inputs ; 259                         ;
-;         5 data inputs ; 208                         ;
-;         6 data inputs ; 1246                        ;
+;         2 data inputs ; 132                         ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 146                         ;
+;         5 data inputs ; 232                         ;
+;         6 data inputs ; 1110                        ;
 ; boundary_port         ; 82                          ;
 ; stratixv_ram_block    ; 72                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.00                       ;
-; Average LUT depth     ; 4.57                        ;
+; Average LUT depth     ; 4.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2713,7 +2703,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -2723,7 +2713,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 12 12:59:13 2022
+    Info: Processing started: Mon Dec 12 19:13:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPSExpo -c MIPSExpo
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_mask.vhd
@@ -2912,7 +2902,7 @@ Warning (276027): Inferred dual-clock RAM node "DECODE:DECODE|bancoReg:REG_BLOCK
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276004): RAM logic "MEM_ACCESS:MEM|driverVGA:driverVGA|interfaceVGA:interface|geradorCaracteres:charGen|memoriaROMVGA:colorRAM|memROM" is uninferred due to inappropriate RAM size File: /home/borg/Documents/insper6Sem/MIPSExpo/(MaquinaEstado)VGA_Tile_32x32_restored/memoriaROMVGA.vhd Line: 31
     Info (276007): RAM logic "MEM_ACCESS:MEM|RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: /home/borg/Documents/insper6Sem/MIPSExpo/RAMMIPS.vhd Line: 21
-    Info (276004): RAM logic "FETCH:FETCH|ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/borg/Documents/insper6Sem/MIPSExpo/ROMMIPS.vhd Line: 157
+    Info (276007): RAM logic "FETCH:FETCH|ROMMIPS:ROM|memROM" is uninferred due to asynchronous read logic File: /home/borg/Documents/insper6Sem/MIPSExpo/ROMMIPS.vhd Line: 215
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "MEM_ACCESS:MEM|RAM_OUT[0]" into a selector File: /home/borg/Documents/insper6Sem/MIPSExpo/registradorGenerico.vhd Line: 30
     Warning (13049): Converted tri-state buffer "MEM_ACCESS:MEM|RAMMIPS:RAM|Dado_out[12]" feeding internal logic into a wire File: /home/borg/Documents/insper6Sem/MIPSExpo/RAMMIPS.vhd Line: 13
@@ -3051,15 +3041,15 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/borg/Documents/insper6Sem/MIPSExpo/MIPSExpo.vhd Line: 15
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/borg/Documents/insper6Sem/MIPSExpo/MIPSExpo.vhd Line: 15
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/borg/Documents/insper6Sem/MIPSExpo/MIPSExpo.vhd Line: 15
-Info (21057): Implemented 4776 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4432 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 66 output pins
-    Info (21061): Implemented 4622 logic cells
+    Info (21061): Implemented 4278 logic cells
     Info (21064): Implemented 72 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 557 megabytes
-    Info: Processing ended: Mon Dec 12 12:59:25 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 564 megabytes
+    Info: Processing ended: Mon Dec 12 19:13:15 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:22
 
 
