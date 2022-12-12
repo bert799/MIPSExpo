@@ -37,8 +37,8 @@ tmp(13) := x"00000000"; -- nop
 tmp(14) := x"00000000"; -- nop
 --Render Frame
 tmp(15) := x"8c080200"; -- lw $t0, 512($zero) #reseta base de tempo
-tmp(16) := x"2A880004"; -- slti $t0, $s4, 4 #confere que não acabaram os frames de animação
-tmp(17) := x"11130006"; -- beq $t0, $s3, display_frame
+tmp(16) := x"2A890004"; -- slti $t1, $s4, 4 #confere que não acabaram os frames de animação
+tmp(17) := x"11330006"; -- beq $t1, $s3, display_frame
 tmp(18) := x"00000000"; -- nop
 tmp(19) := x"00000000"; -- nop
 tmp(20) := x"00000000"; -- nop
@@ -46,10 +46,11 @@ tmp(21) := x"0c000022"; -- jal reset_frames
 tmp(22) := x"00000000"; -- nop
 tmp(23) := x"00000000"; -- nop
 --Display Frame
-tmp(24) := x"00000000"; -- nop
+tmp(24) := x"ac000130"; -- sw $zero, 130($zero) #Grava frame -- limpa frame
+tmp(25) := x"ac000083"; -- sw $zero, 131($zero) #escreve tela
 --tmp(24) := x"22100001"; -- += linha
-tmp(25) := x"ac100080"; -- sw $s0, 128($zero) #Grava linha
-tmp(26) := x"ac110081"; -- sw $s1, 129($zero) #Grava coluna
+tmp(26) := x"ac100080"; -- sw $s0, 128($zero) #Grava linha
+tmp(27) := x"ac110081"; -- sw $s1, 129($zero) #Grava coluna
 --tmp(27) := x"22310001"; -- += coluna
 tmp(28) := x"ac140082"; -- sw $s4, 130($zero) #Grava frame
 tmp(29) := x"ac000083"; -- sw $zero, 131($zero) #escreve tela
@@ -60,7 +61,8 @@ tmp(32) := x"00000000"; -- nop
 tmp(33) := x"00000000"; -- nop
 --Reset Frames
 tmp(34) := x"20140001"; -- addi $s4, $zero, 1 #frame da animação
-tmp(35) := x"03e00008"; -- jr $ra  
+tmp(35) := x"20090000"; -- addi $t1, $zero, 0 #zera conferência
+tmp(36) := x"03e00008"; -- jr $ra  
   
   
   

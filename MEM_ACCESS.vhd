@@ -98,7 +98,7 @@ ResetBaseTime <= '1' when Data_ULA_IN = x"00000200" and MEM_Ctrl(1) = '1' else -
 					  '0';
 					  						
 BaseDeTempoUmSegundo : entity work.divisorGenerico
-        generic map (divisor => 50000000)   -- 24 fps.
+        generic map (divisor => 4166666)   -- 24 fps.
         port map (clk => CLK, saida_clk => Base_tempo_OUT);
   
 FFBASETEMPO : entity work.flipFlop
