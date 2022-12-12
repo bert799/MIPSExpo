@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -10.622
+TNS   : -14180.766
+
+Type  : Slow 1100mV 85C Model Setup 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -9.011
+TNS   : -405.859
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : 0.639
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -4.961
+TNS   : -4.961
+
+Type  : Slow 1100mV 85C Model Removal 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : 1.996
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -2525.146
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -2.636
+TNS   : -101.388
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -0.538
+TNS   : -0.895
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -10.468
+TNS   : -13710.784
+
+Type  : Slow 1100mV 0C Model Setup 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -9.301
+TNS   : -405.098
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.319
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : 0.619
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -5.102
+TNS   : -5.102
+
+Type  : Slow 1100mV 0C Model Removal 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : 2.215
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -2559.469
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -2.636
+TNS   : -100.191
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -0.538
+TNS   : -0.878
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.833
+TNS   : -6428.169
+
+Type  : Fast 1100mV 85C Model Setup 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -4.351
+TNS   : -183.525
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -2.197
+TNS   : -2.197
+
+Type  : Fast 1100mV 85C Model Removal 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : 0.876
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -630.447
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -2.174
+TNS   : -35.963
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -0.016
+TNS   : -0.016
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.344
+TNS   : -5531.276
+
+Type  : Fast 1100mV 0C Model Setup 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -3.992
+TNS   : -163.229
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.117
+TNS   : -0.117
+
+Type  : Fast 1100mV 0C Model Hold 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : -2.104
+TNS   : -2.104
+
+Type  : Fast 1100mV 0C Model Removal 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : 0.919
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -631.302
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MEM_ACCESS:MEM|driverVGA:driverVGA|pixel_clk'
+Slack : -2.174
+TNS   : -34.537
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MEM_ACCESS:MEM|divisorGenerico:BaseDeTempoUmSegundo|tick'
+Slack : 0.002
+TNS   : 0.000
+
+------------------------------------------------------------
