@@ -22,9 +22,9 @@ architecture assincrona of memoriaROMVGA is
   begin
         -- Inicializa os endereços:
         tmp(0) := x"F0F"; --ROSA
-        tmp(1) := x"0F0"; --VERDE
+        tmp(1) := x"FF0"; --AMARELO
         tmp(2) := x"00F"; --AZUL
-        tmp(3) := x"FFF";
+        tmp(3) := x"F00"; --VERMELHO
         return tmp;
     end initMemory;
 
