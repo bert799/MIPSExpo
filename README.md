@@ -3,7 +3,7 @@ Presented by: Bernardo Cunha Capoferri
 ### MIPS architechture programmers:
 [Bernardo Cunha Capoferri](https://github.com/bert799), [Francisco Pinheiro Janela](https://github.com/fran-janela) and [Guilherme Dantas Rameh](https://github.com/GuilhermeRameh)
 
-### Animation Programmer:
+### Assembly Programmer:
 Bernardo Cunha Capoferri
 
 This is repository contains the VHDL code for a MIPS architecture with working pipeline, forwarding and stall, it was run on a DE0-CV board with a Cyclone V FPGA architecture. It is running a simple sprite animation loop coded in assembly language
