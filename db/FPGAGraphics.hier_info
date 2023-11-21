@@ -1,0 +1,12 @@
+|FPGAGraphics
+clk_50 => clk_50.IN1
+rst => rst.IN1
+
+
+|FPGAGraphics|clock_480p:pxl_clk
+clk_50 => clk_pix~reg0.CLK
+rst => ~NO_FANOUT~
+clk_pix <= clk_pix~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_pix_locked <= clk_pix_locked~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

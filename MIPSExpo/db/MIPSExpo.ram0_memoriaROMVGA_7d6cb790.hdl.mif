@@ -1,0 +1,18 @@
+-- begin_signature
+-- memoriaROMVGA(dataWidth
+-- 12
+-- addrWidth
+-- 2)
+-- end_signature
+WIDTH=12;
+DEPTH=4;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	3 :	111100000000;
+	2 :	000000001111;
+	1 :	111111110000;
+	0 :	111100001111;
+END;
